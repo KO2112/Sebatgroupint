@@ -34,11 +34,10 @@ export default function Navbar() {
   
   // Carousel states with continuous operation
   const [currentSlide, setCurrentSlide] = useState(0);
-  // Removed isPaused state since we want continuous operation
-  const [isLoaded, setIsLoaded] = useState(false);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  // Removed isLoaded state since it's not being used
   const startTimeRef = useRef<number>(Date.now());
   const slideStartTimeRef = useRef<number>(Date.now());
+  // Removed timerRef since it's not being used
 
   // Banner content for carousel
   const bannerSlides: BannerSlide[] = [
@@ -200,7 +199,6 @@ export default function Navbar() {
     // Reset start time when component mounts
     startTimeRef.current = Date.now();
     slideStartTimeRef.current = Date.now();
-    setIsLoaded(true);
     
     // Animation frame loop for continuous progress
     let animationFrameId: number;

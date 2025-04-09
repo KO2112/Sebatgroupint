@@ -1,8 +1,8 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import Image from 'next/image'
+
 import Link from 'next/link'
-import { ArrowRight, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
+import { ArrowRight, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false)
